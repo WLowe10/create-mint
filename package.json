@@ -1,0 +1,49 @@
+{
+	"name": "create-mint",
+	"type": "module",
+	"version": "0.0.1",
+	"description": "The best way to create new Mintlify docs",
+	"license": "MIT",
+	"author": {
+		"name": "Wes Lowe",
+		"email": "wesley.jlowe10@gmail.com"
+	},
+	"keywords": [
+		"mintlify",
+		"docs"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/WLowe10/create-mintlify"
+	},
+	"scripts": {
+		"build": "tsup",
+		"dev": "NODE_ENV=development tsx ./src/cli.ts",
+		"format": "prettier --write .",
+		"publish-package": "pnpm build && pnpm publish",
+		"clean": "pnpm clean:dist && pnpm clean:dest && pnpm clean:modules",
+		"clean:dist": "rm -rf dist",
+		"clean:dest": "rm -rf dest",
+		"clean:modules": "rm -rf node_modules",
+		"typecheck": "tsc --noEmit"
+	},
+	"files": [
+		"dist",
+		"package.json",
+		"template",
+		"README.md"
+	],
+	"bin": "./dist/cli.js",
+	"dependencies": {
+		"@clack/prompts": "^0.7.0",
+		"poopgen": "^0.3.0"
+	},
+	"devDependencies": {
+		"@types/gradient-string": "^1.1.6",
+		"@types/node": "^22.5.5",
+		"prettier": "^3.3.2",
+		"tsup": "^8.1.0",
+		"tsx": "^4.16.2",
+		"typescript": "^5.5.3"
+	}
+}
