@@ -20,12 +20,11 @@
 		"build": "tsup",
 		"dev": "NODE_ENV=development tsx ./src/cli.ts",
 		"format": "prettier --write .",
-		"publish-package": "pnpm build && pnpm publish",
+		"typecheck": "tsc --noEmit",
 		"clean": "pnpm clean:dist && pnpm clean:dest && pnpm clean:modules",
 		"clean:dist": "rm -rf dist",
 		"clean:dest": "rm -rf dest",
-		"clean:modules": "rm -rf node_modules",
-		"typecheck": "tsc --noEmit"
+		"clean:modules": "rm -rf node_modules"
 	},
 	"files": [
 		"dist",
@@ -42,7 +41,6 @@
 	},
 	"devDependencies": {
 		"@types/common-tags": "^1.8.4",
-		"@types/gradient-string": "^1.1.6",
 		"@types/node": "^22.5.5",
 		"prettier": "^3.3.2",
 		"tsup": "^8.1.0",
