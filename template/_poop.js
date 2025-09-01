@@ -150,6 +150,8 @@ export async function after(ctx) {
 
 	p.outro(
 		stripIndent`
+			All done!
+
 			Next steps:
 			    1. cd ${docsPath}
 			    2. mint dev
