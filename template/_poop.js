@@ -25,7 +25,7 @@ async function initGit(destPath) {
 	const dirIsInsideGitRepo = await utils.dirIsInsideGitRepo(destPath);
 
 	if (dirIsInsideGitRepo) {
-		spinner.message("Docs are inside a Git repo, skipping");
+		spinner.stop("Docs are inside a Git repo, skipping");
 
 		return;
 	}
