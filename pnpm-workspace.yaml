@@ -1,2 +1,6 @@
+useNodeVersion: 22.16.0
+engineStrict: true
+gitChecks: false
+
 onlyBuiltDependencies:
     - esbuild
