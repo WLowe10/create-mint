@@ -36,9 +36,12 @@
 	"bin": "./dist/cli.js",
 	"dependencies": {
 		"@clack/prompts": "^0.7.0",
-		"poopgen": "^0.3.0"
+		"chalk": "^5.6.0",
+		"common-tags": "^1.8.2",
+		"poopgen": "^1.0.1"
 	},
 	"devDependencies": {
+		"@types/common-tags": "^1.8.4",
 		"@types/gradient-string": "^1.1.6",
 		"@types/node": "^22.5.5",
 		"prettier": "^3.3.2",
